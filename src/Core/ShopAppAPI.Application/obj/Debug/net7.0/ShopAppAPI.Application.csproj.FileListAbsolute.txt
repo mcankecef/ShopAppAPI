@@ -1,0 +1,15 @@
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\bin\Debug\net7.0\ShopAppAPI.Application.deps.json
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\bin\Debug\net7.0\ShopAppAPI.Application.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\bin\Debug\net7.0\ShopAppAPI.Application.pdb
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ShopAppAPI.Application.csproj.AssemblyReference.cache
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ShopAppAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ShopAppAPI.Application.AssemblyInfoInputs.cache
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ShopAppAPI.Application.AssemblyInfo.cs
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ShopAppAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ShopAppAPI.Application.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\refint\ShopAppAPI.Application.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ShopAppAPI.Application.pdb
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ref\ShopAppAPI.Application.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\bin\Debug\net7.0\ShopAppAPI.Domain.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\bin\Debug\net7.0\ShopAppAPI.Domain.pdb
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Application\obj\Debug\net7.0\ShopAppAPI.Application.csproj.CopyComplete

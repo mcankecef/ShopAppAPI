@@ -1,0 +1,12 @@
+c:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\ShopAppAPI.Domain.csproj.AssemblyReference.cache
+c:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\ShopAppAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\ShopAppAPI.Domain.AssemblyInfoInputs.cache
+c:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\ShopAppAPI.Domain.AssemblyInfo.cs
+c:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\ShopAppAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\bin\Debug\net7.0\ShopAppAPI.Domain.deps.json
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\bin\Debug\net7.0\ShopAppAPI.Domain.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\bin\Debug\net7.0\ShopAppAPI.Domain.pdb
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\ShopAppAPI.Domain.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\refint\ShopAppAPI.Domain.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\ShopAppAPI.Domain.pdb
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Core\ShopAppAPI.Domain\obj\Debug\net7.0\ref\ShopAppAPI.Domain.dll

@@ -1,0 +1,12 @@
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\bin\Debug\net7.0\ShopAppAPI.Infrastructure.deps.json
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\bin\Debug\net7.0\ShopAppAPI.Infrastructure.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\bin\Debug\net7.0\ShopAppAPI.Infrastructure.pdb
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\ShopAppAPI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\ShopAppAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\ShopAppAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\ShopAppAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\ShopAppAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\ShopAppAPI.Infrastructure.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\refint\ShopAppAPI.Infrastructure.dll
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\ShopAppAPI.Infrastructure.pdb
+C:\Users\canke\OneDrive\Masaüstü\programing\projects\ShopAppAPI\src\Infrastructure\ShopAppAPI.Infrastructure\obj\Debug\net7.0\ref\ShopAppAPI.Infrastructure.dll
