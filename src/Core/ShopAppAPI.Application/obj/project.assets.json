@@ -1320,8 +1320,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\canke\\OneDrive\\Masaüstü\\programing\\projects\\ShopAppAPI\\src\\Core\\ShopAppAPI.Domain\\ShopAppAPI.Domain.csproj": {
-              "projectPath": "c:\\Users\\canke\\OneDrive\\Masaüstü\\programing\\projects\\ShopAppAPI\\src\\Core\\ShopAppAPI.Domain\\ShopAppAPI.Domain.csproj"
+            "C:\\Users\\canke\\OneDrive\\Masaüstü\\programing\\projects\\ShopAppAPI\\src\\Core\\ShopAppAPI.Domain\\ShopAppAPI.Domain.csproj": {
+              "projectPath": "C:\\Users\\canke\\OneDrive\\Masaüstü\\programing\\projects\\ShopAppAPI\\src\\Core\\ShopAppAPI.Domain\\ShopAppAPI.Domain.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3qZqg0eo62njVcikBjLjvuqSXN4HAQ2LvjwPlC/4OB02Tb01i22CE8atiVrVLywNMsfRji8qt2Zhi1yprqcf/g==",
+  "dgSpecHash": "k6ksNz3hx5xaV6tko4C9AuQ2xeppFM0vifgbiOnd1mTgYUKB4Bk6fzB3rDKhPIMUttMdsphpcvgoW4+E7OAB1Q==",
   "success": true,
-  "projectFilePath": "c:\\Users\\canke\\OneDrive\\Masaüstü\\programing\\projects\\ShopAppAPI\\src\\Core\\ShopAppAPI.Domain\\ShopAppAPI.Domain.csproj",
+  "projectFilePath": "C:\\Users\\canke\\OneDrive\\Masaüstü\\programing\\projects\\ShopAppAPI\\src\\Core\\ShopAppAPI.Domain\\ShopAppAPI.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
