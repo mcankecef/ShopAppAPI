@@ -1,7 +1,12 @@
+using ShopAppAPI.Persistance;
+using ShopAppAPI.Application;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddPersistanceRegistration(builder.Configuration);
+builder.Services.AddApplicationRegistration();
 
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
