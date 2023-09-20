@@ -10,5 +10,6 @@ public class ProductMapping : Profile
     {
         CreateMap<Product, GetAllProductQueryResponse>().ReverseMap();
         CreateMap<Product, CreateProductCommandRequest>().ReverseMap();
+        CreateMap<Product, GetProductsByCategoryIdResponse>();
     }
 }
