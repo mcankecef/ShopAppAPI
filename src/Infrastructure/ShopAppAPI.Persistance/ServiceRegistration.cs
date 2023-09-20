@@ -15,7 +15,7 @@ public static class ServiceRegistration
         var assembly = Assembly.GetExecutingAssembly();
 
         serviceCollection.AddDbContext<ShopAppDbContext>(options
-            => options.UseNpgsql(configuration["ConnectionStrings:SqlConnection"],
+            => options.UseSqlServer(configuration["ConnectionStrings:SqlConnection"],
                                     options => options.EnableRetryOnFailure()));
 
         serviceCollection.AddTransient(typeof(IRepository<>), typeof(Repository<>));

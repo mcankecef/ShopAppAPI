@@ -19,9 +19,15 @@ public class ReadRepository<T> : IReadRepository<T> where T : class, new()
             .AsNoTracking()
             .ToListAsync();
 
-    public async Task<List<T>> GetAllByStatusAsync(StatusTypeEnum statusType) => await _context.Set<T>()
-        .AsNoTracking()
-        .ToListAsync();
+    public async Task<List<T>> GetAllByFilterAsync(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includes)
+    {
+        var query = _context.Set<T>().AsNoTracking();
+
+        if (includes != null)
+            query = includes.Aggregate(query, (current, include) => current.Include(include));
+
+        return await query.Where(filter).ToListAsync();
+    }
 
     public async Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter) => await _context.Set<T>()
                              .AsNoTracking()
