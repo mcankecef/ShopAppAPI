@@ -15,18 +15,18 @@ public class ReadRepository<T> : IReadRepository<T> where T : class, new()
         _context = context;
     }
 
-    public async Task<List<T>> GetAllAsync() => await _context.Set<T>()
-            .AsNoTracking()
-            .ToListAsync();
-
-    public async Task<List<T>> GetAllByFilterAsync(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] includes)
+    public async Task<List<T>> GetAllAsync(int page = 1, int pageSize = 10, Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[] includes)
     {
         var query = _context.Set<T>().AsNoTracking();
 
         if (includes != null)
             query = includes.Aggregate(query, (current, include) => current.Include(include));
+        if (filter != null)
+            query = query.Where(filter);
+        if (page > 0 && pageSize > 0)
+            query = query.Skip((page - 1) * pageSize).Take(pageSize);
 
-        return await query.Where(filter).ToListAsync();
+        return await query.ToListAsync();
     }
 
     public async Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter) => await _context.Set<T>()
