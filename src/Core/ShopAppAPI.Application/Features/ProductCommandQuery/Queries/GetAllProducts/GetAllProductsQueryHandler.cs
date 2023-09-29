@@ -18,7 +18,7 @@ public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQueryReq
 
     public async Task<BaseResponse<List<GetAllProductQueryResponse>>> Handle(GetAllProductsQueryRequest request, CancellationToken cancellationToken)
     {
-        var activeProducts = await _repository.GetAllByFilterAsync(p => p.Status == StatusTypeEnum.Active);
+        var activeProducts = await _repository.GetAllAsync(request.Page, request.PageSize, p => p.Status == StatusTypeEnum.Active);
 
         var response = _mapper.Map<List<GetAllProductQueryResponse>>(activeProducts);
 
