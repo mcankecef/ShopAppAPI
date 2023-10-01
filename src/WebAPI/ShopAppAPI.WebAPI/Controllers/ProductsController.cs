@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ShopAppAPI.Application;
-using ShopAppAPI.Application.Features.ProductCommandQuery.Commands;
+using ShopAppAPI.Application.Features.ProductCommandQuery.Commands.CreateProduct;
 using ShopAppAPI.Application.Features.ProductCommandQuery.Queries.GetAllProducts;
 
 namespace ShopAppAPI.WebAPI.Controllers;
@@ -27,5 +27,12 @@ public class ProductsController : ControllerBase
     [HttpGet("GetAllByCategoryId")]
     public async Task<IActionResult> GetAllByCategoryId(int categoryId, int page, int pageSize)
         => Ok(await _mediator.Send(new GetProductsByCategoryIdQueryRequest(categoryId, page, pageSize)));
+
+    [HttpPut]
+    public async Task<IActionResult> Update([FromBody] UpdateProductCommandRequest request)
+    {
+        await _mediator.Send(request);
+        return NoContent();
+    }
 
 }
