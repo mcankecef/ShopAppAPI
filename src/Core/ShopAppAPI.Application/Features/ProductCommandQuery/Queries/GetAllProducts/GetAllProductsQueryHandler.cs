@@ -22,6 +22,6 @@ public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQueryReq
 
         var response = _mapper.Map<List<GetAllProductQueryResponse>>(activeProducts);
 
-        return new BaseResponse<List<GetAllProductQueryResponse>>("", true, response);
+        return BaseResponse<List<GetAllProductQueryResponse>>.Success(response);
     }
 }

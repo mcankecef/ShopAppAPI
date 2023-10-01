@@ -24,6 +24,6 @@ public class GetProductsByCategoryIdHandler : IRequestHandler<GetProductsByCateg
 
         var response = _mapper.Map<List<GetProductsByCategoryIdResponse>>(productsByCategoryId);
 
-        return new BaseResponse<List<GetProductsByCategoryIdResponse>>(response, true);
+        return BaseResponse<List<GetProductsByCategoryIdResponse>>.Success(response);
     }
 }
