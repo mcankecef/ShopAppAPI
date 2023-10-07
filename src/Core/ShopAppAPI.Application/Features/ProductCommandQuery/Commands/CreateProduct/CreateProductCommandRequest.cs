@@ -9,5 +9,5 @@ public class CreateProductCommandRequest : IRequest<BaseResponse<CreateProductCo
     public string Description { get; set; }
     public decimal Price { get; set; }
     public int CategoryId { get; set; }
-    public StatusTypeEnum StatusType { get; set; } = StatusTypeEnum.Active;
+    public StatusTypeEnum Status { get; set; } = StatusTypeEnum.Active;
 }
