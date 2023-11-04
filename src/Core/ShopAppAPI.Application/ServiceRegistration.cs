@@ -6,9 +6,10 @@ namespace ShopAppAPI.Application;
 
 public static class ServiceRegistration
 {
-    public static void AddApplicationRegistration (this IServiceCollection serviceCollection){
+    public static void AddApplicationRegistration(this IServiceCollection serviceCollection)
+    {
         var assembly = Assembly.GetExecutingAssembly();
-        
+
         serviceCollection.AddAutoMapper(assembly);
         serviceCollection.AddMediatR(assembly);
     }

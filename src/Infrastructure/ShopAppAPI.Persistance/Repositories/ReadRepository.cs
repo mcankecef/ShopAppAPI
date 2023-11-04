@@ -30,8 +30,8 @@ public class ReadRepository<T> : IReadRepository<T> where T : class, new()
     }
 
     public async Task<T> GetByFilterAsync(Expression<Func<T, bool>> filter) => await _context.Set<T>()
-                             .AsNoTracking()
-                             .FirstOrDefaultAsync(filter);
+        .AsNoTracking()
+        .FirstOrDefaultAsync(filter);
 
     public async Task<T> GetByIdAsync(object id) => await _context.Set<T>().FindAsync(id);
 

@@ -1,10 +1,12 @@
 using ShopAppAPI.Persistance;
 using ShopAppAPI.Application;
+using ShopAppAPI.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistanceRegistration(builder.Configuration);
 builder.Services.AddApplicationRegistration();
+builder.Services.AddInfrastructureRegistration(builder.Configuration);
 
 // Add services to the container.
 builder.Services.AddControllers();
