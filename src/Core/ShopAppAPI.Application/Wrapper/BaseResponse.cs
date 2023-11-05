@@ -12,10 +12,17 @@ public class BaseResponse<T>
         Data = data;
         IsSuccess = true;
     }
+    public BaseResponse()
+    {
+
+    }
 
     public string? ErrorMessage { get; }
     public bool IsSuccess { get; }
     public T? Data { get; }
+
+    public static BaseResponse<T> Success()
+        => new();
 
     public static BaseResponse<T> Success(T data)
         => new(data);
