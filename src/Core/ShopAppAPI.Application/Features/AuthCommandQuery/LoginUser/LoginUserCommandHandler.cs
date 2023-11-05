@@ -18,7 +18,8 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, 
     public LoginUserCommandHandler(UserManager<AppUser> userManager,
        SignInManager<AppUser> signInManager,
        ITokenHandler tokenHandler,
-       IUserService userService, IMapper mapper)
+       IUserService userService, 
+       IMapper mapper)
     {
         _userManager = userManager;
         _signInManager = signInManager;
