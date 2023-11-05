@@ -8,5 +8,4 @@ public class CreateUserCommandRequest : IRequest<BaseResponse<CreateUserCommandR
     public string UserName { get; set; }
     public string Password { get; set; }
     public string PasswordConfirm { get; set; }
-    public Guid AvatarId { get; set; }
 }

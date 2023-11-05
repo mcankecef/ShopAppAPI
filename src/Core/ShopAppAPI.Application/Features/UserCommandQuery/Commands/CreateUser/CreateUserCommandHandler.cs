@@ -25,7 +25,6 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest
             UserName = request.UserName,
             Email = request.Email,
             FullName = request.FullName,
-            AvatarId = request.AvatarId
         };
 
         if (!request.Password.Equals(request.PasswordConfirm))

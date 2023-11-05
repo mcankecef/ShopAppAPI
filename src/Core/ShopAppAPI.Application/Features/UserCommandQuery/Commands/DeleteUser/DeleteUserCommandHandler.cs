@@ -1,14 +1,13 @@
 ﻿using MediatR;
 
 namespace ShopAppAPI.Application.Features.UserCommandQuery.Commands.DeleteUser;
+
 public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommandRequest, BaseResponse<DeleteUserCommandResponse>>
 {
     private readonly IUserService _userService;
 
     public DeleteUserCommandHandler(IUserService userService)
-    {
-        _userService = userService;
-    }
+        => _userService = userService;
 
     public async Task<BaseResponse<DeleteUserCommandResponse>> Handle(DeleteUserCommandRequest request, CancellationToken cancellationToken)
     {
