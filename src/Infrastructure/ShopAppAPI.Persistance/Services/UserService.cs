@@ -49,11 +49,7 @@ public class UserService : IUserService
 
     public async Task DeleteUser(string userId)
     {
-        var user = await _userManager.FindByIdAsync(userId);
-
-        if (user is null)
-            throw new ArgumentNullException($"User is not found");
-
+        var user = await _userManager.FindByIdAsync(userId) ?? throw new ArgumentNullException($"User is not found");
         await _userManager.DeleteAsync(user);
     }
 
