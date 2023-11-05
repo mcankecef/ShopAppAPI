@@ -15,12 +15,24 @@ public class DeleteBasketCommandHandler : IRequestHandler<DeleteBasketCommandReq
 
     public async Task<BaseResponse<DeleteBasketCommandResponse>> Handle(DeleteBasketCommandRequest request, CancellationToken cancellationToken)
     {
-        var basketByUserId = await _readRepository.GetByFilterAsync(b => b.UserId == request.UserId);
+        var basketByUserId = await _readRepository.GetByFilterAsync(b => b.UserId == request.UserId, true, b => b.Products);
 
         if (basketByUserId != null)
         {
+            var deletedProduct = basketByUserId.Products
+                                .Where(p => p.Id == request.ProductId)
+                                .FirstOrDefault();
+
+            if (deletedProduct != null)
+            {
+                basketByUserId.Products.Remove(deletedProduct);
+                var operationResult = _writeRepository.Update(basketByUserId);
+
+                if (operationResult)
+                    return BaseResponse<DeleteBasketCommandResponse>.Success();
+            }
         }
 
-        throw new NotImplementedException();
+        return BaseResponse<DeleteBasketCommandResponse>.Fail("Delete basket operation failed!");
     }
 }
