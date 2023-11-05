@@ -28,6 +28,6 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandR
             return BaseResponse<CreateProductCommandResponse>.Success(response);
         }
 
-        return BaseResponse<CreateProductCommandResponse>.Fail("Create product failed!!");
+        return BaseResponse<CreateProductCommandResponse>.Fail("Product create failed!!");
     }
 }

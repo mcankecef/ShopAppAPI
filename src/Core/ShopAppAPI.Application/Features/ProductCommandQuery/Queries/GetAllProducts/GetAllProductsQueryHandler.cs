@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using MediatR;
+using ShopAppAPI.Application.Extensions;
 using ShopAppAPI.Application.Repositories;
-using ShopAppAPI.Domain;
+using ShopAppAPI.Domain.Entities;
 
 namespace ShopAppAPI.Application.Features.ProductCommandQuery.Queries.GetAllProducts;
 
@@ -18,7 +19,9 @@ public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQueryReq
 
     public async Task<BaseResponse<List<GetAllProductQueryResponse>>> Handle(GetAllProductsQueryRequest request, CancellationToken cancellationToken)
     {
-        var activeProducts = await _repository.GetAllAsync(request.Page, request.PageSize, p => p.Status == StatusTypeEnum.Active, p => p.Category);
+        var filter = FilterExtension.CreateProductFilter(request.Filter);
+
+        var activeProducts = await _repository.GetAllAsync(request.Page, request.PageSize, filter, p => p.Category);
 
         var response = _mapper.Map<List<GetAllProductQueryResponse>>(activeProducts);
 

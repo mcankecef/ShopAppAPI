@@ -13,9 +13,9 @@ public class ProductsController : ControllerBase
 
     public ProductsController(IMediator mediator) => _mediator = mediator;
 
-    [HttpGet]
-    public async Task<IActionResult> GetAll(int page, int pageSize)
-        => Ok(await _mediator.Send(new GetAllProductsQueryRequest(page, pageSize)));
+    [HttpPost,Route("GetAll")]
+    public async Task<IActionResult> GetAll(GetAllProductsQueryRequest request)
+        => Ok(await _mediator.Send(request));
 
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateProductCommandRequest request)

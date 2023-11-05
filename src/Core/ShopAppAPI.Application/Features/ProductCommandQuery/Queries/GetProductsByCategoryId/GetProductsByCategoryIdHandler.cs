@@ -20,10 +20,10 @@ public class GetProductsByCategoryIdHandler : IRequestHandler<GetProductsByCateg
     public async Task<BaseResponse<List<GetProductsByCategoryIdResponse>>> Handle(GetProductsByCategoryIdQueryRequest request, CancellationToken cancellationToken)
     {
 
-        var productsByCategoryId = await _productReadRepository.GetAllAsync(request.Page, request.PageSize, p => p.CategoryId == request.CategoryId, p => p.Category);
+        // var productsByCategoryId = await _productReadRepository.GetAllAsync(request.Page, request.PageSize, p => p.CategoryId == request.CategoryId, p => p.Category);
 
-        var response = _mapper.Map<List<GetProductsByCategoryIdResponse>>(productsByCategoryId);
+        // var response = _mapper.Map<List<GetProductsByCategoryIdResponse>>(productsByCategoryId);
 
-        return BaseResponse<List<GetProductsByCategoryIdResponse>>.Success(response);
+        return BaseResponse<List<GetProductsByCategoryIdResponse>>.Success();
     }
 }
