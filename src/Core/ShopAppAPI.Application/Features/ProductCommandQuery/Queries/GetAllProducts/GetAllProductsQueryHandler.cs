@@ -2,7 +2,6 @@
 using MediatR;
 using ShopAppAPI.Application.Extensions;
 using ShopAppAPI.Application.Repositories;
-using ShopAppAPI.Domain.Entities;
 
 namespace ShopAppAPI.Application.Features.ProductCommandQuery.Queries.GetAllProducts;
 
