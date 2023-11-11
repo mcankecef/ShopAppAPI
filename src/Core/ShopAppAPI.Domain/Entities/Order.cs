@@ -2,7 +2,10 @@
 
 public class Order : BaseEntity
 {
-    public Order() => Products = new List<Product>();
+    public Order()
+    {
+        Products = new List<Product>();
+    }
 
     public Guid Id { get; set; }
     public decimal TotalPrice { get; set; }
@@ -12,5 +15,5 @@ public class Order : BaseEntity
     public string CustomerId { get; set; }
     public AppUser Customer { get; set; }
     // Product Relation
-    public ICollection<Product> Products { get; set; }
+    public ICollection<Product> Products { get; set; } = new List<Product>();
 }

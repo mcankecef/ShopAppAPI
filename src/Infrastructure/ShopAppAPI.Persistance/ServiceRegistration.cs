@@ -8,6 +8,8 @@ using ShopAppAPI.Application.Repositories;
 using ShopAppAPI.Application;
 using ShopAppAPI.Domain;
 using Microsoft.AspNetCore.Identity;
+using ShopAppAPI.Application.Repositories.Order;
+using ShopAppAPI.Persistance.Repositories.Order;
 
 namespace ShopAppAPI.Persistance;
 
@@ -39,6 +41,9 @@ public static class ServiceRegistration
 
         serviceCollection.AddTransient<IBasketWriteRepository, BasketWriteRepository>();
         serviceCollection.AddTransient<IBasketReadRepository, BasketReadRepository>();
+
+        serviceCollection.AddTransient<IOrderWriteRepository, OrderWriteRepository>();
+        serviceCollection.AddTransient<IOrderReadRepository, OrderReadRepository>();
 
         serviceCollection.AddTransient<IUserService, UserService>();
     }
