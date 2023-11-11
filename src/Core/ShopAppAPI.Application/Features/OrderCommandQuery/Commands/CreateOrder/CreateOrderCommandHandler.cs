@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
+using ShopAppAPI.Application.Repositories;
 using ShopAppAPI.Application.Repositories.Order;
 using ShopAppAPI.Domain;
 using ShopAppAPI.Domain.Entities;
@@ -9,11 +11,15 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommandReque
 {
     private readonly IOrderWriteRepository _orderWriteRepository;
     private readonly IUserService _userService;
+    private readonly IProductReadRepository _productReadRepository;
 
-    public CreateOrderCommandHandler(IOrderWriteRepository orderWriteRepository, IUserService userService)
+    public CreateOrderCommandHandler(IOrderWriteRepository orderWriteRepository,
+    IUserService userService,
+    IProductReadRepository productReadRepository)
     {
         _orderWriteRepository = orderWriteRepository;
         _userService = userService;
+        _productReadRepository = productReadRepository;
     }
 
     public async Task<BaseResponse<CreateOrderCommandResponse>> Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken)
@@ -22,7 +28,10 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommandReque
 
         if (userExist)
         {
-            var totalPrice = request.Products.Select(p => p.Price).Sum();
+            var productQuery = _productReadRepository
+                            .GetByFilter(p => request.ProductIds.Contains(p.Id),true);
+            var totalPrice = await productQuery.Select(p => p.Price).SumAsync();
+            var products = await productQuery.ToListAsync();
 
             var order = new Order
             {
@@ -31,6 +40,10 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommandReque
                 Status = StatusTypeEnum.Active,
                 TotalPrice = totalPrice,
             };
+            products.ForEach(p =>
+            {
+                order.Products.Add(p);
+            });
 
             var operationResult = await _orderWriteRepository.CreateAsync(order);
 

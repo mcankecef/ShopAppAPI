@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using ShopAppAPI.Application.Dtos.Product;
 
 namespace ShopAppAPI.Application.Features.BasketCommandQuery.Queries.GetBasketByUserId;
@@ -17,7 +18,7 @@ public class GetBasketByUserIdQueryHandler : IRequestHandler<GetBasketByUserIdQu
 
     public async Task<BaseResponse<GetBasketByUserIdQueryResponse>> Handle(GetBasketByUserIdQueryRequest request, CancellationToken cancellationToken)
     {
-        var basket = await _readRepository.GetByFilterAsync(b => b.UserId == request.UserId, false, b => b.Products);
+        var basket = await _readRepository.GetByFilter(b => b.UserId == request.UserId, false, b => b.Products).FirstOrDefaultAsync();
 
         var productDtos = _mapper.Map<List<ProductDto>>(basket.Products);
 

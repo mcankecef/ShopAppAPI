@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShopAppAPI.Application;
 
@@ -15,7 +16,7 @@ public class DeleteBasketCommandHandler : IRequestHandler<DeleteBasketCommandReq
 
     public async Task<BaseResponse<DeleteBasketCommandResponse>> Handle(DeleteBasketCommandRequest request, CancellationToken cancellationToken)
     {
-        var basketByUserId = await _readRepository.GetByFilterAsync(b => b.UserId == request.UserId, true, b => b.Products);
+        var basketByUserId = await _readRepository.GetByFilter(b => b.UserId == request.UserId, true, b => b.Products).FirstOrDefaultAsync();
 
         if (basketByUserId != null)
         {

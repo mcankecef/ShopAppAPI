@@ -7,5 +7,5 @@ public class CreateOrderCommandRequest : IRequest<BaseResponse<CreateOrderComman
 {
     public string Address { get; set; }
     public string CustomerId { get; set; }
-    public List<ProductDto> Products { get; set; }
+    public List<Guid> ProductIds { get; set; }
 }

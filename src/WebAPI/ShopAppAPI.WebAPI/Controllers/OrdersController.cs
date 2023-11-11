@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ShopAppAPI.Application.Features.OrderCommandQuery.Commands.CreateOrder;
+using ShopAppAPI.Application.Features.OrderCommandQuery.Queries.GetOrdersByUser;
 
 namespace ShopAppAPI.WebAPI.Controllers;
 
@@ -11,6 +12,10 @@ public class OrdersController : ControllerBase
 
     public OrdersController(IMediator mediator)
      => _mediator = mediator;
+
+    [HttpGet("GetOrdersByCustomer")]
+    public async Task<IActionResult> GetOrdersByCustomer([FromQuery] string customerId)
+        => Ok(await _mediator.Send(new GetOrdersByCustomerQueryRequest(customerId)));
 
     [HttpPost]
     public async Task<IActionResult> Create(CreateOrderCommandRequest request)

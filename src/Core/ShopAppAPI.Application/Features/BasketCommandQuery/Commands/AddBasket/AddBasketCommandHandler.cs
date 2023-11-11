@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using ShopAppAPI.Application.Repositories;
 using ShopAppAPI.Domain;
+using ShopAppAPI.Domain.Entities;
 
 namespace ShopAppAPI.Application;
 
@@ -23,8 +25,8 @@ public class AddBasketCommandHandler : IRequestHandler<AddBasketCommandRequest, 
     public async Task<BaseResponse<AddBasketCommandResponse>> Handle(AddBasketCommandRequest request, CancellationToken cancellationToken)
     {
         var errorMessage = "Basket add operation failed!";
-        var existingBasket = await _readRepository.GetByFilterAsync(b => b.UserId == request.UserId);
-        var product = await _productReadRepository.GetByFilterAsync(p => p.Id == request.ProductId);
+        var existingBasket = await _readRepository.GetByFilter(b => b.UserId == request.UserId).FirstOrDefaultAsync();
+        var product = await _productReadRepository.GetByFilter(p => p.Id == request.ProductId, true).FirstOrDefaultAsync();
 
         bool operationResult = false;
 
@@ -33,6 +35,7 @@ public class AddBasketCommandHandler : IRequestHandler<AddBasketCommandRequest, 
             var newBasket = new Basket
             {
                 UserId = request.UserId,
+                Products = new List<Product> { product }
             };
 
             operationResult = await _writeRepository.CreateAsync(newBasket);
@@ -42,10 +45,6 @@ public class AddBasketCommandHandler : IRequestHandler<AddBasketCommandRequest, 
 
             existingBasket = newBasket;
         }
-
-        existingBasket.Products.Add(product);
-
-        operationResult = _writeRepository.Update(existingBasket);
 
         if (operationResult)
         {
