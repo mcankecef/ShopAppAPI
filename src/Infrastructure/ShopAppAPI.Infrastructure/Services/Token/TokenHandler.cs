@@ -9,7 +9,7 @@ using ShopAppAPI.Application;
 
 namespace ShopAppAPI.Infrastructure;
 
-public class TokenHandler
+public class TokenHandler : ITokenHandler
 {
     private readonly IConfiguration _configuration;
     private readonly IHttpContextAccessor _httpContextAccessor;
