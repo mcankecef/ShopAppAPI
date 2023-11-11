@@ -9,4 +9,5 @@ public interface IUserService
     Task UpdateUser(UpdateUserDto updateUserDto);
     Task DeleteUser(string userId);
     Task UpdateRefreshToken(AppUser user, string refreshToken, DateTime refreshTokenLifeTime);
+    Task<bool> UserExistAsync(string userId);
 }

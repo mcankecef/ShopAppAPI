@@ -17,6 +17,9 @@ public class UserService : IUserService
         _mapper = mapper;
     }
 
+    public async Task<bool> UserExistAsync(string userId)
+        => await _userManager.Users.AnyAsync(u => u.Id == userId);
+
     public async Task<GetUserByIdDto> GetUserById(string userId)
     {
         var user = await _userManager.Users
