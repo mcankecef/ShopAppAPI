@@ -2,7 +2,6 @@
 using MediatR;
 using ShopAppAPI.Application.Repositories;
 using ShopAppAPI.Domain;
-using ShopAppAPI.Domain.Entities;
 
 namespace ShopAppAPI.Application;
 
