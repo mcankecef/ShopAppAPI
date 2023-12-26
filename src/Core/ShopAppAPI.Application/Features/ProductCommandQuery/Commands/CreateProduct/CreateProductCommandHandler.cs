@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using MediatR;
 using ShopAppAPI.Application.Repositories;
 using ShopAppAPI.Domain.Entities;

@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using ShopAppAPI.Application.Repositories;
 using ShopAppAPI.Domain;
