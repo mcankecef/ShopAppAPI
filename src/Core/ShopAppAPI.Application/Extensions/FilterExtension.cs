@@ -12,10 +12,10 @@ public static class FilterExtension
 
         if (productFilter.Name != null)
             filters.Add(f => f.Name.Equals(productFilter.Name));
-        if (productFilter.Price != null)
-            filters.Add(f => f.Price == productFilter.Price);
         if (productFilter.CategoryId != null)
             filters.Add(f => f.CategoryId == productFilter.CategoryId);
+        if (productFilter.MaxPrice != null)
+            filters.Add(f => f.Price >= productFilter.MinPrice && f.Price <= productFilter.MaxPrice);
 
         filters.Add(f => f.Stock > 0);
 
