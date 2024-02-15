@@ -14,15 +14,15 @@ public class AuthsController : ControllerBase
     public AuthsController(IMediator mediator)
         => _mediator = mediator;
 
-    [HttpPost, Route("Login")]
+    [HttpPost, Route("login")]
     public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
         => Ok(await _mediator.Send(loginUserCommandRequest));
 
-    [HttpPost, Route("RefreshTokenLogin")]
+    [HttpPost, Route("refresh-token-login")]
     public async Task<IActionResult> RefreshTokenLogin(RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest)
         => Ok(await _mediator.Send(refreshTokenLoginCommandRequest));
 
-    [HttpPost, Route("Register")]
+    [HttpPost, Route("register")]
     public async Task<IActionResult> Register(CreateUserCommandRequest createUserCommandRequest)
         => Ok(await _mediator.Send(createUserCommandRequest));
 }

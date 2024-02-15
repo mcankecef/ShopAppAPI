@@ -13,7 +13,7 @@ public class OrdersController : ControllerBase
     public OrdersController(IMediator mediator)
      => _mediator = mediator;
 
-    [HttpGet("GetOrdersByCustomer")]
+    [HttpGet("get-orders-by-customer")]
     public async Task<IActionResult> GetOrdersByCustomer([FromQuery] string customerId)
         => Ok(await _mediator.Send(new GetOrdersByCustomerQueryRequest(customerId)));
 

@@ -14,7 +14,7 @@ public class ProductsController : ControllerBase
     public ProductsController(IMediator mediator) 
         => _mediator = mediator;
 
-    [HttpPost,Route("GetAll")]
+    [HttpPost,Route("get-all")]
     public async Task<IActionResult> GetAll(GetAllProductsQueryRequest request)
         => Ok(await _mediator.Send(request));
 
@@ -25,7 +25,7 @@ public class ProductsController : ControllerBase
         return StatusCode(201, response);
     }
 
-    [HttpGet("GetAllByCategoryId")]
+    [HttpGet("get-all-by-category-id")]
     public async Task<IActionResult> GetAllByCategoryId(int categoryId, int page, int pageSize)
         => Ok(await _mediator.Send(new GetProductsByCategoryIdQueryRequest(categoryId, page, pageSize)));
 

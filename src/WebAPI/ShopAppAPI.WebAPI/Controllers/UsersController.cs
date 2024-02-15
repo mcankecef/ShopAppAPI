@@ -19,7 +19,7 @@ public class UsersController : ControllerBase
     public async Task<IActionResult> GetAll()
         => Ok(await _mediator.Send(new GetAllUserQueryRequest()));
 
-    [HttpGet, Route("GetById/{userId}")]
+    [HttpGet, Route("get-by-id/{userId}")]
     public async Task<IActionResult> GetById(string userId)
         => Ok(await _mediator.Send(new GetUserByIdQueryRequest(userId)));
 
