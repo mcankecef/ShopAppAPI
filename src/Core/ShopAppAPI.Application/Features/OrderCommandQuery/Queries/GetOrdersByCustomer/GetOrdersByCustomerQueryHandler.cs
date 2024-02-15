@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using ShopAppAPI.Application.Dtos.Product;
 using ShopAppAPI.Application.Features.OrderCommandQuery.Queries.GetOrdersByUser;
 using ShopAppAPI.Application.Repositories;
-using System.Linq.Expressions;
 
 namespace ShopAppAPI.Application.Features.OrderCommandQuery.Queries.GetOrdersByCustomer;
 

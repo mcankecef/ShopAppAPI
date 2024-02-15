@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using ShopAppAPI.Application;
 
 namespace ShopAppAPI.Application.Features.UserCommandQuery.Commands.UpdateUser;
 public class UpdateUserCommandRequest : IRequest<BaseResponse<UpdateUserCommandResponse>>

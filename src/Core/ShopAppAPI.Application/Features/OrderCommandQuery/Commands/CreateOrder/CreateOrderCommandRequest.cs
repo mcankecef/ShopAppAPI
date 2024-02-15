@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using ShopAppAPI.Application.Dtos.Product;
 
 namespace ShopAppAPI.Application.Features.OrderCommandQuery.Commands.CreateOrder;
 

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using FluentValidation;
 using MediatR;
 using ShopAppAPI.Application.Repositories;
 using ShopAppAPI.Domain.Entities;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ShopAppAPI.Application.Features.ProductCommandQuery.Commands.CreateProduct;
 
