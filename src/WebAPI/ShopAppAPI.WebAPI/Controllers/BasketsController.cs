@@ -11,9 +11,7 @@ public class BasketsController : ControllerBase
     private readonly IMediator _mediator;
 
     public BasketsController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+        => _mediator = mediator;
 
     [HttpPost]
     public async Task<IActionResult> Add([FromBody] AddBasketCommandRequest request)
