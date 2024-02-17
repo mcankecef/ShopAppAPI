@@ -10,6 +10,10 @@ using ShopAppAPI.Domain;
 using Microsoft.AspNetCore.Identity;
 using ShopAppAPI.Application.Repositories.Order;
 using ShopAppAPI.Persistance.Repositories.Order;
+using ShopAppAPI.Application.Repositories.AppUserAddress;
+using ShopAppAPI.Persistance.Repositories.AppUserAddress;
+using ShopAppAPI.Application.Repositories.Brand;
+using ShopAppAPI.Persistance.Repositories.Brand;
 
 namespace ShopAppAPI.Persistance;
 
@@ -44,6 +48,12 @@ public static class ServiceRegistration
 
         serviceCollection.AddTransient<IOrderWriteRepository, OrderWriteRepository>();
         serviceCollection.AddTransient<IOrderReadRepository, OrderReadRepository>();
+
+        serviceCollection.AddTransient<IAppUserAddressWriteRepository, AppUserAddressWriteRepository>();
+        serviceCollection.AddTransient<IAppUserAddressReadRepository, AppUserAddressReadRepository>();
+
+        serviceCollection.AddTransient<IBrandReadRepository, BrandReadRepository>();
+        serviceCollection.AddTransient<IBrandWriteRepository, BrandWriteRepository>();
 
         serviceCollection.AddTransient<IUserService, UserService>();
     }

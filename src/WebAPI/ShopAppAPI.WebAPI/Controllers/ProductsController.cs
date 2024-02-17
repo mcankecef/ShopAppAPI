@@ -35,5 +35,4 @@ public class ProductsController : ControllerBase
         await _mediator.Send(request);
         return NoContent();
     }
-
 }

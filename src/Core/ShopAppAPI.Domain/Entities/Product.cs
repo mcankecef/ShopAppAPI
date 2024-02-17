@@ -12,7 +12,10 @@ public class Product : BaseEntity<Guid>
     public decimal Price { get; set; }
     public int Stock { get; set; }
     public int CategoryId { get; set; }
+    public int BrandId { get; set; }
 
+    // Brand Relation
+    public Brand Brand { get; set; }
     // Category Relation
     public Category Category { get; set; }
     // Basket Relation
