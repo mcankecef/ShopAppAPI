@@ -2,11 +2,9 @@
 
 namespace ShopAppAPI.Domain;
 
-public class Basket : BaseEntity
+public class Basket : BaseEntity<Guid>
 {
     public Basket() => Products = new List<Product>();
-
-    public Guid Id { get; set; }
 
     // User Relation
     public string UserId { get; set; }

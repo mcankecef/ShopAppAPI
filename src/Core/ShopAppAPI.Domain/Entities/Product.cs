@@ -1,6 +1,6 @@
 namespace ShopAppAPI.Domain.Entities;
 
-public class Product : BaseEntity
+public class Product : BaseEntity<Guid>
 {
     public Product()
     {
@@ -8,7 +8,6 @@ public class Product : BaseEntity
         Orders = new List<Order>();
     }
 
-    public Guid Id { get; set; }
     public string Name { get; set; }
     public decimal Price { get; set; }
     public int Stock { get; set; }

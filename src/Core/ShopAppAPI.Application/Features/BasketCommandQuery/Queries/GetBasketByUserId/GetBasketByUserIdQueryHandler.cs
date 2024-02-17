@@ -18,7 +18,12 @@ public class GetBasketByUserIdQueryHandler : IRequestHandler<GetBasketByUserIdQu
 
     public async Task<BaseResponse<GetBasketByUserIdQueryResponse>> Handle(GetBasketByUserIdQueryRequest request, CancellationToken cancellationToken)
     {
-        var basket = await _readRepository.GetByFilter(b => b.UserId == request.UserId, false, b => b.Products).FirstOrDefaultAsync();
+        var basket = await _readRepository
+            .GetByFilter(b => b.UserId == request.UserId, isTracked: false, b => b.Products)
+            .FirstOrDefaultAsync();
+
+        if (basket == null)
+            return BaseResponse<GetBasketByUserIdQueryResponse>.Success();
 
         var productDtos = _mapper.Map<List<ProductDto>>(basket.Products);
 

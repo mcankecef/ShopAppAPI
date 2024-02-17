@@ -1,13 +1,12 @@
 ﻿namespace ShopAppAPI.Domain.Entities;
 
-public class Order : BaseEntity
+public class Order : BaseEntity<Guid>
 {
     public Order()
     {
         Products = new List<Product>();
     }
 
-    public Guid Id { get; set; }
     public decimal TotalPrice { get; set; }
     public string Address { get; set; }
 
