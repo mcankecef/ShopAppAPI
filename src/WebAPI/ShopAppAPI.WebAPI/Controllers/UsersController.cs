@@ -24,6 +24,7 @@ public class UsersController : ControllerBase
         => Ok(await _mediator.Send(new GetUserByIdQueryRequest(userId)));
 
     [HttpPut]
+
     public async Task<IActionResult> Update(UpdateUserCommandRequest request)
     {
         await _mediator.Send(request);
