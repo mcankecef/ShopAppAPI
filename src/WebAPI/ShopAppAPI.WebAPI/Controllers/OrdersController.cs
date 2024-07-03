@@ -11,7 +11,9 @@ public class OrdersController : ControllerBase
     private readonly IMediator _mediator;
 
     public OrdersController(IMediator mediator)
-     => _mediator = mediator;
+    {
+        _mediator = mediator;
+    }
 
     [HttpGet("get-orders-by-customer")]
     public async Task<IActionResult> GetOrdersByCustomer([FromQuery] string customerId)
